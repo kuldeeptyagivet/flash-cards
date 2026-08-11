@@ -1,0 +1,12 @@
+[
+  {
+    "id": "countries-capital",
+    "title": "Countries & Capitals",
+    "category": "Geography",
+    "icon": "\ud83c\udf0d",
+    "badge": "196 Cards",
+    "description": "Learn 196 world countries, capital cities, continents, and interactive vector maps!",
+    "dataPath": "decks/Countries-Capital/data.json",
+    "mapsPath": "decks/Countries-Capital/maps/"
+  }
+]

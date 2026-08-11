@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="372.73 219.25 180 180" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </radialGradient>
+    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="372.73" y="219.25" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative Grid Lines -->
+  <path d="M 372.73 309.25 H 552.73 M 462.73 219.25 V 399.25" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Country Vector Polygon Representation -->
+  <g filter="url(#shadow)">
+    <!-- Stylized Country Outline Envelope around Capital -->
+    <path d="M 417.73 284.25 Q 452.73 259.25 497.73 279.25 T 512.73 329.25 T 447.73 354.25 T 412.73 319.25 Z" 
+          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Capital City Glowing Pulse Ring -->
+  <circle cx="462.73" cy="309.25" r="16" fill="url(#pinGlow)">
+    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Capital Pin Marker -->
+  <circle cx="462.73" cy="309.25" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="462.73" cy="309.25" r="2" fill="#FFFFFF"/>
+
+  <!-- Capital Label Badge -->
+  <g transform="translate(462.73, 297.25)">
+    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
+    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Pretoria</text>
+  </g>
+</svg>

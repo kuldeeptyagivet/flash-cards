@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Flash Cards Hub — Interactive Learning for Kids</title>
+  <meta name="description" content="Educational flashcard web app for kids. Learn World Countries & Capitals, Flags, Currencies, and Science.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-row">
+      <h1 class="brand-title" id="homeLogoBtn">
+        <span class="logo-icon">🎓</span> FlashKids Hub
+      </h1>
+      
+      <button class="back-decks-btn" id="backDecksBtn" style="display: none;">
+        ← Back to Decks
+      </button>
+
+      <div class="mode-switcher" id="modeSwitcher" style="display: none;">
+        <button class="mode-btn active" data-mode="cards">🎴 Cards</button>
+        <button class="mode-btn" data-mode="quiz">🎮 Quiz</button>
+      </div>
+    </div>
+
+    <!-- Filter Bar (Visible inside Deck View) -->
+    <div class="filter-bar" id="filterBar" style="display: none;">
+      <button class="filter-chip active" data-filter="all">All (196)</button>
+      <button class="filter-chip" data-filter="Asia">Asia 🌏</button>
+      <button class="filter-chip" data-filter="Europe">Europe 🏰</button>
+      <button class="filter-chip" data-filter="Africa">Africa 🦁</button>
+      <button class="filter-chip" data-filter="Americas">Americas 🗽</button>
+      <button class="filter-chip" data-filter="Oceania">Oceania 🏝️</button>
+      <button class="filter-chip" data-filter="starred">Starred ⭐</button>
+    </div>
+  </header>
+
+  <!-- HOME: Deck Selection Hub View -->
+  <main class="deck-hub-container" id="deckHubView">
+    
+    <!-- Search Bar -->
+    <div class="search-box-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="deckSearchInput" placeholder="Search decks (e.g. Countries, Capitals, Flags)...">
+    </div>
+
+    <div class="section-heading">Explore Flash Card Decks</div>
+
+    <div class="decks-grid" id="decksGrid">
+      
+      <!-- Countries & Capitals Deck Card -->
+      <div class="deck-card" data-deck-id="countries-capital" data-deck-path="decks/Countries-Capital/data.json" data-maps-path="decks/Countries-Capital/maps/">
+        <div class="deck-icon-badge">🌍</div>
+        <div class="deck-info">
+          <div class="deck-header-row">
+            <div class="deck-title">Countries & Capitals</div>
+            <span class="card-count-badge">196 Cards</span>
+          </div>
+          <div class="deck-desc">Learn 196 world countries, capital cities, continents, and interactive vector maps!</div>
+          <div class="start-btn">Start Learning →</div>
+        </div>
+      </div>
+
+      <!-- Future Deck Placeholders -->
+      <div class="deck-card disabled">
+        <div class="deck-icon-badge" style="background: rgba(236, 72, 153, 0.2); border-color: rgba(236, 72, 153, 0.3);">🏳️</div>
+        <div class="deck-info">
+          <div class="deck-header-row">
+            <div class="deck-title">World Flags</div>
+            <span class="card-count-badge coming-soon">Coming Soon</span>
+          </div>
+          <div class="deck-desc">Identify flag designs, colors, and country symbols across all continents.</div>
+        </div>
+      </div>
+
+      <div class="deck-card disabled">
+        <div class="deck-icon-badge" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.3);">🪐</div>
+        <div class="deck-info">
+          <div class="deck-header-row">
+            <div class="deck-title">Solar System & Space</div>
+            <span class="card-count-badge coming-soon">Coming Soon</span>
+          </div>
+          <div class="deck-desc">Discover planets, moons, stars, and space exploration fun facts.</div>
+        </div>
+      </div>
+
+      <div class="deck-card disabled">
+        <div class="deck-icon-badge" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.3);">💵</div>
+        <div class="deck-info">
+          <div class="deck-header-row">
+            <div class="deck-title">World Currencies</div>
+            <span class="card-count-badge coming-soon">Coming Soon</span>
+          </div>
+          <div class="deck-desc">Learn international money units, symbols, and banking facts.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Flashcard Main Stage (Hidden by default, shown on deck pick) -->
+  <main class="main-stage" id="flashcardStage" style="display: none;">
+    
+    <div class="card-wrapper" id="cardWrapper">
+      <div class="flashcard">
+        
+        <!-- Card Front: Country + Map -->
+        <div class="card-face card-front">
+          <div class="card-top-bar">
+            <span class="continent-badge" id="continentBadge">Asia</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="action-btn" id="speakFrontBtn" title="Pronounce Country Name">🔊</button>
+              <button class="action-btn" id="starBtn" title="Star this Country">☆</button>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <img id="cardMap" src="" alt="Country Map Vector">
+          </div>
+
+          <div class="country-header">
+            <div class="country-name">
+              <span id="flagEmoji" class="flag-emoji">🇮🇳</span>
+              <span id="countryName">India</span>
+            </div>
+            <div class="flip-hint">Tap card to reveal capital 🔄</div>
+          </div>
+        </div>
+
+        <!-- Card Back: Capital City + Highlights -->
+        <div class="card-face card-back">
+          <div class="card-top-bar">
+            <span class="continent-badge">CAPITAL CITY</span>
+            <button class="action-btn" id="speakBackBtn" title="Pronounce Capital Name">🔊</button>
+          </div>
+
+          <div style="text-align: center; margin: auto 0;">
+            <div class="capital-title">Capital of this Country</div>
+            <div class="capital-name" id="capitalName">New Delhi</div>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-label">Learning Goal</div>
+              <div class="info-value">World Geography</div>
+            </div>
+            <div class="info-card">
+              <div class="info-label">Card Deck</div>
+              <div class="info-value">Countries & Capitals</div>
+            </div>
+          </div>
+
+          <div class="flip-hint" style="margin-top: 16px;">Tap card to return 🔄</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Controls -->
+    <div class="bottom-controls">
+      <button class="nav-btn" id="prevBtn">⬅️</button>
+      <span class="counter-badge" id="cardCounter">1 / 196</span>
+      <button class="nav-btn" id="nextBtn">➡️</button>
+    </div>
+
+  </main>
+
+  <!-- Quiz Overlay Stage -->
+  <div class="quiz-stage" id="quizStage">
+    <div class="quiz-header">
+      <div class="score-pill" id="quizScore">Score: 0 ⭐</div>
+      <div class="score-pill" id="quizStreak" style="background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">Streak: 0 🔥</div>
+    </div>
+
+    <div class="quiz-card">
+      <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Capital Quiz Challenge</div>
+      <div class="quiz-question" id="quizCountryQuestion">What is the capital of:</div>
+      <div class="country-name" id="quizCountryName" style="margin-top: 12px; font-size: 2rem;">🇮🇳 India</div>
+    </div>
+
+    <div class="quiz-options" id="quizOptions">
+      <!-- Options injected dynamically by quiz.js -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/speech.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

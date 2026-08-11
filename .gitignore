@@ -1,0 +1,4 @@
+# Scratch & Logs
+scratch/
+*.log
+.DS_Store
