@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="538.07 119.38 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="612.48 188.75 36.55 40.10" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_la" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_la" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_la" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="538.07" y="119.38" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="612.48" y="188.75" width="36.55" height="40.10" fill="url(#bgGrad_la)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 538.07 209.38 H 718.07 M 628.07 119.38 V 299.38" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 583.07 184.38 Q 618.07 159.38 663.07 179.38 T 678.07 229.38 T 613.07 254.38 T 578.07 219.38 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_la)">
+    <path d="M 638.63 218.11 L 636.66 217.27 L 635.65 218.85 L 633.82 217.95 L 634.54 216.91 L 634.64 214.97 L 632.84 212.95 L 632.7 210.66 L 631.01 208.76 L 629.33 208.6 L 628.89 209.41 L 627.58 209.48 L 626.92 209.07 L 624.58 210.46 L 624.52 208.37 L 625.07 205.89 L 623.57 205.79 L 623.44 204.37 L 622.48 203.64 L 622.95 202.76 L 624.84 201.21 L 625.04 201.77 L 626.23 201.84 L 625.89 199.1 L 627.05 198.75 L 628.34 200.64 L 629.34 202.81 L 632.08 202.83 L 632.94 204.89 L 631.52 205.51 L 630.88 206.36 L 633.54 207.76 L 635.39 210.53 L 636.79 212.57 L 638.47 214.18 L 639.03 215.81 L 638.63 218.11 Z" fill="url(#realCountryGrad_la)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="628.07" cy="209.38" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="628.07" cy="209.38" r="2.1929999999999974" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="1.4619999999999982;2.9239999999999964;1.4619999999999982" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="628.07" cy="209.38" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="628.07" cy="209.38" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(628.07, 197.38)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Vientiane</text>
-  </g>
+  <circle cx="628.07" cy="209.38" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>

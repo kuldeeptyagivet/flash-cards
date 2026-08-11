@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="343.93 169.88 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="417.07 228.30 62.21 61.43" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_cd" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_cd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_cd" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="343.93" y="169.88" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="417.07" y="228.30" width="62.21" height="61.43" fill="url(#bgGrad_cd)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 343.93 259.88 H 523.9300000000001 M 433.93 169.88 V 349.88" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 388.93 234.88 Q 423.93 209.88 468.93 229.88 T 483.93 279.88 T 418.93 304.88 T 383.93 269.88 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_cd)">
+    <path d="M 465.2 260.01 L 465.6 262.06 L 465.38 263.22 L 465.82 264.52 L 467.11 265.77 L 468.31 268.6 L 468.31 268.6 L 467.44 268.37 L 464.45 268.75 L 463.86 269.02 L 463.22 270.45 L 463.72 271.45 L 463.32 274.12 L 463.05 276.4 L 463.65 276.8 L 465.2 277.68 L 465.81 277.27 L 466.0 279.73 L 464.3 279.71 L 463.39 278.45 L 462.57 277.48 L 460.86 277.17 L 460.37 275.98 L 459.01 276.69 L 457.23 276.38 L 456.48 275.35 L 455.07 275.14 L 454.03 275.19 L 453.9 274.49 L 453.14 274.43 L 452.13 274.3 L 450.75 274.64 L 449.78 274.58 L 449.23 274.79 L 449.35 272.1 L 448.61 271.26 L 448.45 269.88 L 448.78 268.52 L 448.33 267.66 L 448.28 266.25 L 445.59 266.27 L 445.78 265.46 L 444.65 265.47 L 444.53 265.85 L 443.15 265.94 L 442.59 267.25 L 442.26 267.81 L 441.03 267.49 L 440.3 267.81 L 438.83 267.99 L 437.98 266.82 L 437.47 266.09 L 436.83 264.75 L 436.28 263.08 L 429.72 263.05 L 428.94 263.32 L 428.3 263.28 L 427.38 263.58 L 427.07 262.89 L 427.64 262.65 L 427.71 261.68 L 428.07 261.11 L 428.88 260.64 L 429.46 260.86 L 430.22 260.01 L 431.43 260.03 L 431.58 260.66 L 432.41 261.06 L 433.71 259.66 L 435.01 258.57 L 435.57 257.86 L 435.5 256.03 L 436.46 253.87 L 437.48 252.72 L 438.94 251.65 L 439.2 250.94 L 439.25 250.13 L 439.61 249.36 L 439.5 248.1 L 439.78 246.13 L 440.21 244.74 L 440.88 243.55 L 441.01 242.21 L 441.21 240.65 L 442.07 239.52 L 443.26 238.8 L 445.09 239.56 L 446.51 240.38 L 448.13 240.6 L 449.79 241.04 L 450.45 239.69 L 450.76 239.52 L 451.77 239.75 L 454.25 238.63 L 455.12 239.1 L 455.84 239.04 L 456.18 238.49 L 457.0 238.3 L 458.67 238.54 L 460.1 238.59 L 460.83 238.35 L 462.18 240.19 L 463.18 240.46 L 463.77 240.09 L 464.8 240.24 L 466.04 239.76 L 466.56 240.72 L 468.52 242.2 L 468.52 242.2 L 468.39 244.8 L 469.28 245.1 L 468.56 245.89 L 467.71 246.48 L 466.86 247.64 L 466.39 248.67 L 466.27 250.46 L 465.75 251.31 L 465.73 252.98 L 465.09 253.6 L 465.01 254.92 L 464.71 255.1 L 464.5 256.31 L 465.06 257.32 L 465.2 260.01 Z" fill="url(#realCountryGrad_cd)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="433.93" cy="259.88" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="433.93" cy="259.88" r="3.732599999999999" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="2.488399999999999;4.976799999999998;2.488399999999999" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="433.93" cy="259.88" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="433.93" cy="259.88" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(433.93, 247.88)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Kinshasa</text>
-  </g>
+  <circle cx="433.93" cy="259.88" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>

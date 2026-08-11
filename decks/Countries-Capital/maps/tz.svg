@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="389.45 173.72000000000003 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="455.20 242.11 44.39 44.12" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_tz" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_tz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_tz" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="389.45" y="173.72000000000003" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="455.20" y="242.11" width="44.39" height="44.12" fill="url(#bgGrad_tz)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 389.45 263.72 H 569.45 M 479.45 173.72000000000003 V 353.72" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 434.45 238.72000000000003 Q 469.45 213.72000000000003 514.45 233.72000000000003 T 529.45 283.72 T 464.45 308.72 T 429.45 273.72 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_tz)">
+    <path d="M 475.34 252.11 L 475.72 252.36 L 483.77 256.89 L 483.93 258.18 L 487.12 260.4 L 486.09 263.15 L 486.22 264.42 L 487.64 265.24 L 487.71 265.82 L 487.1 267.17 L 487.23 267.85 L 487.08 268.93 L 487.86 270.34 L 488.78 272.56 L 489.59 273.05 L 489.59 273.05 L 487.82 274.36 L 485.39 275.24 L 484.06 275.2 L 483.27 275.88 L 481.72 275.94 L 481.14 276.23 L 478.47 275.59 L 476.8 275.77 L 476.18 272.7 L 475.42 271.65 L 474.98 271.02 L 472.8 270.6 L 471.54 269.93 L 470.13 269.55 L 469.24 269.17 L 468.31 268.6 L 468.31 268.6 L 467.11 265.77 L 465.82 264.52 L 465.38 263.22 L 465.6 262.06 L 465.2 260.01 L 466.12 259.9 L 466.93 259.1 L 467.79 257.94 L 468.34 257.47 L 468.32 256.75 L 467.84 256.24 L 467.71 255.37 L 467.71 255.37 L 468.35 255.08 L 468.48 253.78 L 467.6 252.52 L 468.38 252.25 L 470.81 252.28 L 475.34 252.11 Z" fill="url(#realCountryGrad_tz)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="479.45" cy="263.72" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="479.45" cy="263.72" r="2.663399999999999" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="1.7755999999999994;3.551199999999999;1.7755999999999994" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="479.45" cy="263.72" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="479.45" cy="263.72" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(479.45, 251.72000000000003)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Dodoma</text>
-  </g>
+  <circle cx="479.45" cy="263.72" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>

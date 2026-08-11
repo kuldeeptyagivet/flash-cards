@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="385.05 191.33999999999997 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="462.64 260.60 35.00 37.28" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_mw" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_mw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_mw" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="385.05" y="191.33999999999997" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="462.64" y="260.60" width="35.00" height="37.28" fill="url(#bgGrad_mw)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 385.05 281.34 H 565.05 M 475.05 191.33999999999997 V 371.34" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 430.05 256.34 Q 465.05 231.33999999999997 510.05 251.33999999999997 T 525.05 301.34 T 460.05 326.34 T 425.05 291.34 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_mw)">
+    <path d="M 472.8 270.6 L 474.98 271.02 L 475.42 271.65 L 476.18 272.7 L 476.8 275.77 L 476.18 277.5 L 476.8 280.46 L 477.57 280.43 L 478.37 281.17 L 479.3 282.83 L 479.49 285.79 L 478.53 286.28 L 477.85 287.88 L 476.4 286.45 L 476.24 284.82 L 476.71 283.75 L 476.58 282.83 L 475.7 282.25 L 475.09 282.46 L 473.81 281.36 L 472.64 280.77 L 473.32 278.65 L 474.01 277.85 L 473.59 275.97 L 474.03 274.14 L 474.41 273.52 L 473.85 271.61 L 472.8 270.6 Z" fill="url(#realCountryGrad_mw)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="475.05" cy="281.34" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="475.05" cy="281.34" r="2.1" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="1.4000000000000001;2.8000000000000003;1.4000000000000001" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="475.05" cy="281.34" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="475.05" cy="281.34" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(475.05, 269.34)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Lilongwe</text>
-  </g>
+  <circle cx="475.05" cy="281.34" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>

@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="620.33 75.03999999999999 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="677.57 126.04 55.86 61.36" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_jp" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_jp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_jp" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="620.33" y="75.03999999999999" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="677.57" y="126.04" width="55.86" height="61.36" fill="url(#bgGrad_jp)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 620.33 165.04 H 800.33 M 710.33 75.03999999999999 V 255.04" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 665.33 140.04 Q 700.33 115.03999999999999 745.33 135.04 T 760.33 185.04 T 695.33 210.04 T 660.33 175.04 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_jp)">
+    <path d="M 715.3 155.23 L 713.24 158.09 L 713.28 160.99 L 712.44 163.2 L 712.83 164.58 L 711.67 166.5 L 708.83 167.78 L 704.93 167.94 L 701.76 171.0 L 700.27 169.98 L 700.18 167.97 L 696.31 168.56 L 693.68 169.83 L 691.08 169.88 L 693.33 171.84 L 691.85 176.31 L 690.41 177.4 L 689.34 176.39 L 689.88 174.04 L 688.48 173.27 L 687.57 171.45 L 689.68 170.63 L 690.84 168.95 L 693.08 167.56 L 694.71 165.7 L 699.13 164.88 L 701.51 165.44 L 703.83 160.53 L 705.31 161.86 L 708.57 159.07 L 709.84 157.97 L 711.23 154.48 L 710.85 151.22 L 711.79 149.37 L 714.15 148.82 L 715.37 152.89 L 715.3 155.23 Z M 721.36 141.02 L 722.94 139.7 L 723.43 143.16 L 720.13 143.99 L 718.19 146.99 L 714.69 144.93 L 713.48 148.21 L 711.01 148.26 L 710.71 145.28 L 711.8 142.94 L 714.18 142.77 L 714.83 138.49 L 715.48 136.04 L 718.1 139.31 L 719.8 140.36 L 721.36 141.02 Z M 694.16 171.01 L 695.39 169.41 L 696.65 169.72 L 697.56 168.59 L 699.2 169.17 L 699.48 170.09 L 698.23 171.71 L 697.32 170.85 L 696.18 171.47 L 695.59 173.02 L 694.14 172.27 L 694.16 171.01 Z" fill="url(#realCountryGrad_jp)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="710.33" cy="165.04" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="710.33" cy="165.04" r="3.3515999999999937" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="2.234399999999996;4.468799999999992;2.234399999999996" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="710.33" cy="165.04" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="710.33" cy="165.04" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(710.33, 153.04)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Tokyo</text>
-  </g>
+  <circle cx="710.33" cy="165.04" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>

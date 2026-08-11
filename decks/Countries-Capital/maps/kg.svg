@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="475.71000000000004 54.34 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="544.37 133.05 43.99 35.00" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_kg" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_kg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_kg" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="475.71000000000004" y="54.34" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="544.37" y="133.05" width="43.99" height="35.00" fill="url(#bgGrad_kg)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 475.71000000000004 144.34 H 655.71 M 565.71 54.34 V 234.34" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 520.71 119.34 Q 555.71 94.34 600.71 114.34 T 615.71 164.34 T 550.71 189.34 T 515.71 154.34 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_kg)">
+    <path d="M 557.69 146.18 L 558.19 144.86 L 559.65 144.43 L 563.31 145.47 L 563.66 143.68 L 564.92 143.05 L 568.08 144.33 L 568.89 144.0 L 572.57 144.08 L 575.87 144.4 L 576.99 145.48 L 578.36 145.92 L 578.04 146.6 L 574.54 148.22 L 573.75 149.39 L 570.9 149.74 L 570.06 151.62 L 567.71 151.23 L 566.17 151.8 L 564.05 153.17 L 564.36 153.85 L 563.72 154.51 L 559.52 154.94 L 556.78 154.01 L 554.37 154.23 L 554.58 152.56 L 557.0 153.05 L 557.81 152.15 L 559.5 152.44 L 562.35 150.33 L 559.71 148.78 L 558.13 149.52 L 556.49 148.4 L 558.35 146.47 L 557.69 146.18 Z" fill="url(#realCountryGrad_kg)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="565.71" cy="144.34" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="565.71" cy="144.34" r="2.6394000000000006" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="1.7596000000000005;3.519200000000001;1.7596000000000005" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="565.71" cy="144.34" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="565.71" cy="144.34" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(565.71, 132.34)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Bishkek</text>
-  </g>
+  <circle cx="565.71" cy="144.34" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>

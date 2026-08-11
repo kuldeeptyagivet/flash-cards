@@ -1,48 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="472.33000000000004 80.41999999999999 180 180" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="525.28 151.01 57.69 54.77" width="100%" height="100%">
   <defs>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="60%">
+    <radialGradient id="bgGrad_pk" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#0F172A"/>
     </radialGradient>
-    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="countryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#3B82F6"/>
+    <linearGradient id="realCountryGrad_pk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="shadow_pk" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="472.33000000000004" y="80.41999999999999" width="180" height="180" rx="12" fill="url(#bgGrad)"/>
+  <!-- Background -->
+  <rect x="525.28" y="151.01" width="57.69" height="54.77" fill="url(#bgGrad_pk)"/>
   
-  <!-- Decorative Grid Lines -->
-  <path d="M 472.33000000000004 170.42 H 652.33 M 562.33 80.41999999999999 V 260.41999999999996" stroke="#334155" stroke-width="0.5" stroke-dasharray="2,2"/>
-
-  <!-- Country Vector Polygon Representation -->
-  <g filter="url(#shadow)">
-    <!-- Stylized Country Outline Envelope around Capital -->
-    <path d="M 517.33 145.42 Q 552.33 120.41999999999999 597.33 140.42 T 612.33 190.42 T 547.33 215.42 T 512.33 180.42 Z" 
-          fill="url(#countryGrad)" stroke="#818CF8" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Real Geographic Country Polygon -->
+  <g filter="url(#shadow_pk)">
+    <path d="M 572.97 165.53 L 570.83 167.82 L 568.35 168.22 L 564.98 167.56 L 563.89 168.72 L 564.68 171.07 L 565.45 172.86 L 567.24 174.16 L 565.35 175.68 L 565.38 177.53 L 563.22 180.12 L 561.83 182.71 L 559.51 185.36 L 556.93 185.17 L 554.48 187.79 L 555.93 188.91 L 556.18 190.82 L 557.43 192.06 L 557.87 194.17 L 552.98 194.16 L 551.5 195.78 L 549.87 195.17 L 549.21 193.42 L 547.5 191.55 L 543.4 192.01 L 539.79 192.06 L 536.66 192.4 L 537.5 189.54 L 540.7 188.25 L 540.52 187.11 L 539.46 186.7 L 539.4 184.49 L 537.27 183.38 L 536.38 181.84 L 535.28 180.5 L 539.0 181.8 L 541.22 181.42 L 542.55 181.75 L 543.0 181.19 L 544.55 181.41 L 547.44 180.35 L 547.51 178.16 L 548.75 176.69 L 550.41 176.69 L 550.65 175.97 L 552.35 175.62 L 553.17 175.87 L 554.04 175.13 L 553.92 173.56 L 554.86 171.96 L 556.27 171.29 L 555.4 169.52 L 557.52 169.6 L 558.13 168.64 L 558.03 167.6 L 559.14 166.46 L 558.89 165.11 L 558.36 163.94 L 559.66 162.74 L 562.04 162.16 L 564.59 161.84 L 565.72 161.33 L 567.02 161.01 L 568.66 162.31 L 569.32 164.43 L 572.97 165.53 Z" fill="url(#realCountryGrad_pk)" stroke="#818CF8" stroke-width="0.8" stroke-linejoin="round"/>
   </g>
 
-  <!-- Capital City Glowing Pulse Ring -->
-  <circle cx="562.33" cy="170.42" r="16" fill="url(#pinGlow)">
-    <animate attributeName="r" values="10;22;10" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.5s" repeatCount="indefinite"/>
+  <!-- Real Capital Location Marker -->
+  <circle cx="562.33" cy="170.42" r="3.4614000000000034" fill="#EF4444" fill-opacity="0.35">
+    <animate attributeName="r" values="2.307600000000002;4.615200000000004;2.307600000000002" dur="2s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Capital Pin Marker -->
-  <circle cx="562.33" cy="170.42" r="5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-  <circle cx="562.33" cy="170.42" r="2" fill="#FFFFFF"/>
-
-  <!-- Capital Label Badge -->
-  <g transform="translate(562.33, 158.42)">
-    <rect x="-35" y="-14" width="70" height="15" rx="4" fill="#0F172A" fill-opacity="0.85" stroke="#475569" stroke-width="0.5"/>
-    <text x="0" y="-3" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="bold" fill="#F8FAFC" text-anchor="middle">Islamabad</text>
-  </g>
+  <circle cx="562.33" cy="170.42" r="1.2" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.6"/>
 </svg>
