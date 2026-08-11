@@ -469,11 +469,71 @@ body {
 }
 
 .capital-name {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #38BDF8;
-  margin: 4px 0 16px 0;
+  margin: 2px 0 0 0;
   text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  line-height: 1.2;
+}
+
+/* Large Flag + Country Name on Back */
+.back-flag-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 0 8px;
+}
+
+.back-flag-big {
+  font-size: 3.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+.back-country-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* Capital Row */
+.back-capital-row {
+  width: 100%;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+.back-section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+/* Currency symbol display */
+.currency-symbol-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.currency-code-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #A5B4FC;
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .info-grid {

@@ -130,30 +130,41 @@
           </div>
         </div>
 
-        <!-- Card Back: Capital City + Highlights -->
+        <!-- Card Back: Flag + Capital + Currency -->
         <div class="card-face card-back">
           <div class="card-top-bar">
-            <span class="continent-badge">CAPITAL CITY</span>
+            <span class="continent-badge" id="backContinentBadge">ASIA</span>
             <button class="action-btn" id="speakBackBtn" title="Pronounce Capital Name">🔊</button>
           </div>
 
-          <div style="text-align: center; margin: auto 0;">
-            <div class="capital-title">Capital of this Country</div>
+          <!-- Large Flag Display -->
+          <div class="back-flag-display">
+            <span id="backFlagEmoji" class="back-flag-big">🇮🇳</span>
+            <div class="back-country-name" id="backCountryName">India</div>
+          </div>
+
+          <!-- Capital Row -->
+          <div class="back-capital-row">
+            <div class="back-section-label">🏛️ Capital City</div>
             <div class="capital-name" id="capitalName">New Delhi</div>
           </div>
 
+          <!-- Info Cards: Currency -->
           <div class="info-grid">
             <div class="info-card">
-              <div class="info-label">Learning Goal</div>
-              <div class="info-value">World Geography</div>
+              <div class="info-label">💰 Currency</div>
+              <div class="info-value" id="currencyName">Indian Rupee</div>
             </div>
             <div class="info-card">
-              <div class="info-label">Card Deck</div>
-              <div class="info-value">Countries & Capitals</div>
+              <div class="info-label">🔤 Symbol / Code</div>
+              <div class="info-value currency-symbol-display">
+                <span id="currencySymbol">₹</span>
+                <span id="currencyCode" class="currency-code-badge">INR</span>
+              </div>
             </div>
           </div>
 
-          <div class="flip-hint" style="margin-top: 16px;">Tap card to return 🔄</div>
+          <div class="flip-hint" style="margin-top: 12px;">Tap card to return 🔄</div>
         </div>
 
       </div>

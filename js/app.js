@@ -27,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const starBtn = document.getElementById('starBtn');
   const speakFrontBtn = document.getElementById('speakFrontBtn');
   const speakBackBtn = document.getElementById('speakBackBtn');
+  // Back card enrichment elements
+  const backFlagEmojiEl = document.getElementById('backFlagEmoji');
+  const backCountryNameEl = document.getElementById('backCountryName');
+  const backContinentBadgeEl = document.getElementById('backContinentBadge');
+  const currencyNameEl = document.getElementById('currencyName');
+  const currencySymbolEl = document.getElementById('currencySymbol');
+  const currencyCodeEl = document.getElementById('currencyCode');
   
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
@@ -110,12 +117,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset flip
     cardWrapper.classList.remove('flipped');
 
-    // Populate text
+    // Populate front card text
     countryNameEl.textContent = item.country;
     flagEmojiEl.textContent = item.flag;
     continentBadgeEl.textContent = item.continent;
-    capitalNameEl.textContent = item.capital;
     cardCounterEl.textContent = `${currentIndex + 1} / ${currentDeck.length}`;
+
+    // Populate back card: flag, country name, continent, capital, currency
+    if (backFlagEmojiEl) backFlagEmojiEl.textContent = item.flag;
+    if (backCountryNameEl) backCountryNameEl.textContent = item.country;
+    if (backContinentBadgeEl) backContinentBadgeEl.textContent = item.continent;
+    capitalNameEl.textContent = item.capital;
+    if (currencyNameEl) currencyNameEl.textContent = item.currency || 'N/A';
+    if (currencySymbolEl) currencySymbolEl.textContent = item.currency_symbol || '?';
+    if (currencyCodeEl) currencyCodeEl.textContent = item.currency_code || '???';
 
     // Load SVG Map from subfolder
     cardMapEl.src = `${activeMapsPath}${item.iso}.svg`;
