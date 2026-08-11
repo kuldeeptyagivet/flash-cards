@@ -12,9 +12,9 @@ An interactive, mobile-first educational Flash Cards application designed for ki
 
 ## 🏗️ Architecture & Component Design
 
-### 1. Real Geographic Vector Maps & Data (`decks/Countries-Capital/`)
-* **[`decks/Countries-Capital/data.json`](file:///g:/My%20Drive/Flash%20Cards/decks/Countries-Capital/data.json)**: Full dataset containing 196 countries, capitals, continents, ISO 2-letter codes, flag emojis, and lat/long coordinates.
-* **[`decks/Countries-Capital/maps/`](file:///g:/My%20Drive/Flash%20Cards/decks/Countries-Capital/maps/)**: 196 **Real Geographic SVG Vector Maps** generated from official Natural Earth GeoJSON border boundaries (`in.svg`, `us.svg`, `fr.svg`, `br.svg`, `jp.svg`) with auto-calibrated viewports and glowing capital markers.
+### 1. Dual-View SVG Vector Maps (`decks/Countries-Capital/maps/`)
+* **Zoomed Real Country Shape**: Real geographic border polygon for the selected country with a glowing capital city marker.
+* **Mini World Locator Inset Map**: Positioned in the top-right corner of every SVG card, showing the entire world map with a glowing yellow/gold beacon indicating exactly where that country sits on planet Earth.
 
 ### 2. Deck Selection Hub & Search Bar (`index.html`)
 * **Landing Page Hub**: Shows a prominent **Search Bar** (`🔍 Search decks...`) and grid of deck cards.
@@ -26,28 +26,11 @@ An interactive, mobile-first educational Flash Cards application designed for ki
 ## 📜 Session History & Progress Log
 
 ### Session 1: 2026-08-11
-* **Status:** Completed Real Geographic SVG Map integration, GitHub Repository setup, and GitHub Pages deployment.
+* **Status:** Added Dual-View World Locator Inset Maps to all 196 flashcards.
 * **Accomplished:**
-  * Replaced initial placeholder shapes with **100% authentic, real geographical border polygons** for all 196 countries generated via Natural Earth GeoJSON vector data.
+  * Embedded a **Mini World Locator Inset Map** in the top-right corner of all 196 SVG vector maps.
+  * Replaced initial placeholder shapes with 100% authentic, real geographical border polygons generated via Natural Earth GeoJSON vector data.
   * Re-organized dataset and vector SVG maps under `decks/Countries-Capital/`.
   * Designed and built the Home Deck Selection Hub with live search bar filtering across available decks.
-  * Added "← Back to Decks" header navigation.
   * Created public GitHub repo `kuldeeptyagivet/flash-cards` and enabled GitHub Pages at `https://kuldeeptyagivet.github.io/flash-cards/`.
   * Pushed updated code and verified live deployment.
-
----
-
-## 🚀 How to Run & Deploy
-
-1. **Local Development:**
-   Run in terminal:
-   ```bash
-   python -m http.server 8000 --directory "g:\My Drive\Flash Cards"
-   ```
-   Open `http://localhost:8000/` on mobile or desktop.
-
-2. **Live URL:**
-   Open `https://kuldeeptyagivet.github.io/flash-cards/` on any mobile phone or browser.
-
-3. **Cloudflare Pages (`flash.examsindia.org`):**
-   * Connect `kuldeeptyagivet/flash-cards` to Cloudflare Pages and set custom domain `flash.examsindia.org`.
