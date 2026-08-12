@@ -282,13 +282,21 @@ body {
 /* Controls & Filter Bar */
 .filter-bar {
   display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-chips-scroll {
+  display: flex;
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 4px;
   scrollbar-width: none;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.filter-bar::-webkit-scrollbar {
+.filter-chips-scroll::-webkit-scrollbar {
   display: none;
 }
 
@@ -322,7 +330,7 @@ body {
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
-  margin-left: 8px;
+  flex-shrink: 0;
   transition: all 0.2s ease;
 }
 

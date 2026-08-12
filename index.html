@@ -29,14 +29,16 @@
 
     <!-- Filter Bar (Visible inside Deck View) -->
     <div class="filter-bar" id="filterBar" style="display: none;">
-      <button class="filter-chip active" data-filter="all">All (196)</button>
-      <button class="filter-chip" data-filter="Asia">Asia 🌏</button>
-      <button class="filter-chip" data-filter="Europe">Europe 🏰</button>
-      <button class="filter-chip" data-filter="Africa">Africa 🦁</button>
-      <button class="filter-chip" data-filter="Americas">Americas 🗽</button>
-      <button class="filter-chip" data-filter="Oceania">Oceania 🏝️</button>
-      <button class="filter-chip" data-filter="starred">Starred ⭐</button>
-      <button class="print-btn" id="printBtn" title="Print the currently filtered cards">🖨️ Print Cards</button>
+      <div class="filter-chips-scroll">
+        <button class="filter-chip active" data-filter="all">All (196)</button>
+        <button class="filter-chip" data-filter="Asia">Asia 🌏</button>
+        <button class="filter-chip" data-filter="Europe">Europe 🏰</button>
+        <button class="filter-chip" data-filter="Africa">Africa 🦁</button>
+        <button class="filter-chip" data-filter="Americas">Americas 🗽</button>
+        <button class="filter-chip" data-filter="Oceania">Oceania 🏝️</button>
+        <button class="filter-chip" data-filter="starred">Starred ⭐</button>
+      </div>
+      <button class="print-btn" id="printBtn" title="Print the currently filtered cards">🖨️ Print</button>
     </div>
   </header>
 
