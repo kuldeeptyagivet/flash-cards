@@ -49,11 +49,11 @@
 
   .print-card {
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2.5mm 4mm;
+    padding: 2mm 3mm;
     box-sizing: border-box;
     text-align: center;
     overflow: hidden;
@@ -62,73 +62,94 @@
 
   .print-card-front {
     border-right: 0.3mm dashed #999999;
+    justify-content: flex-start;
   }
 
+  .print-card-back {
+    justify-content: space-evenly;
+  }
+
+  /* Map grows to fill whatever vertical space the text below doesn't need,
+     so the map is always as large as the card allows. */
   .print-card-map {
     width: 100%;
-    height: 20mm;
-    margin-bottom: 1.5mm;
-    flex-shrink: 0;
+    flex: 1 1 auto;
+    min-height: 0;
+    margin-bottom: 1mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .print-card-map img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
   }
 
   .print-card-flag {
-    font-size: 18pt;
+    font-size: 28pt;
     line-height: 1;
   }
 
   .print-card-country {
-    font-size: 10.5pt;
-    font-weight: 700;
+    font-size: 16pt;
+    font-weight: 800;
     margin-top: 1mm;
+    line-height: 1.15;
   }
 
   .print-card-continent {
-    font-size: 6.5pt;
+    font-size: 8.5pt;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #666666;
-    margin-top: 0.5mm;
+    margin-top: 1mm;
   }
 
   .print-card-back-flag-row {
     display: flex;
     align-items: center;
-    gap: 2mm;
+    gap: 2.5mm;
+    flex-shrink: 0;
   }
 
   .print-card-back-flag-row .print-card-flag {
-    font-size: 14pt;
+    font-size: 20pt;
   }
 
   .print-card-back-country {
-    font-size: 8pt;
-    color: #555555;
-    font-weight: 600;
+    font-size: 11pt;
+    color: #444444;
+    font-weight: 700;
+  }
+
+  .print-card-capital-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
   }
 
   .print-card-capital-label {
-    font-size: 6.5pt;
+    font-size: 8.5pt;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #888888;
-    margin-top: 2.5mm;
   }
 
   .print-card-capital-name {
-    font-size: 12pt;
-    font-weight: 700;
-    margin-top: 0.5mm;
+    font-size: 24pt;
+    font-weight: 800;
+    margin-top: 1mm;
+    line-height: 1.1;
   }
 
   .print-card-currency {
-    font-size: 7.5pt;
+    font-size: 10.5pt;
     color: #444444;
-    margin-top: 2.5mm;
+    flex-shrink: 0;
   }
 }

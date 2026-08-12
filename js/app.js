@@ -316,8 +316,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="print-card-flag">${item.flag}</span>
           <span class="print-card-back-country">${item.country}</span>
         </div>
-        <div class="print-card-capital-label">🏛️ Capital</div>
-        <div class="print-card-capital-name">${item.capital}</div>
+        <div class="print-card-capital-group">
+          <div class="print-card-capital-label">🏛️ Capital</div>
+          <div class="print-card-capital-name">${item.capital}</div>
+        </div>
         <div class="print-card-currency">💰 ${item.currency || 'N/A'} (${item.currency_symbol || '?'} ${item.currency_code || '???'})</div>
       `;
     }
