@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentDeck = [];
   let currentIndex = 0;
   let activeMapsPath = 'decks/Countries-Capital/maps/';
+  let activePrintMapsPath = 'decks/Countries-Capital/maps-print/';
   let starredSet = new Set(JSON.parse(localStorage.getItem('starred_countries') || '[]'));
   let quizInstance = null;
 
@@ -37,9 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
-  
+
   const filterChips = document.querySelectorAll('.filter-chip');
   const modeBtns = document.querySelectorAll('.mode-btn');
+
+  // Print
+  const printBtn = document.getElementById('printBtn');
+  const printArea = document.getElementById('printArea');
+  const printModalOverlay = document.getElementById('printModalOverlay');
+  const printModalCancel = document.getElementById('printModalCancel');
+  const printModalConfirm = document.getElementById('printModalConfirm');
+  const printModalCount = document.getElementById('printModalCount');
+  const printModalPages = document.getElementById('printModalPages');
 
   // Deck Hub Search Filter
   if (deckSearchInput) {
@@ -63,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('click', () => {
       const dataPath = card.dataset.deckPath;
       activeMapsPath = card.dataset.mapsPath || 'decks/Countries-Capital/maps/';
+      activePrintMapsPath = card.dataset.printMapsPath || 'decks/Countries-Capital/maps-print/';
       loadDeck(dataPath);
     });
   });
@@ -281,6 +292,77 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       optionsContainer.appendChild(optBtn);
+    });
+  }
+
+  // Print: Cards per A4 sheet, front/back side-by-side (2 cols x 5 rows)
+  // for a fold-down-the-center-and-glue printable flashcard sheet.
+  const CARDS_PER_SHEET = 5;
+
+  function buildPrintCard(item, side) {
+    const card = document.createElement('div');
+    card.className = `print-card print-card-${side}`;
+
+    if (side === 'front') {
+      card.innerHTML = `
+        <div class="print-card-map"><img src="${activePrintMapsPath}${item.iso}.svg" alt=""></div>
+        <div class="print-card-flag">${item.flag}</div>
+        <div class="print-card-country">${item.country}</div>
+        <div class="print-card-continent">${item.continent}</div>
+      `;
+    } else {
+      card.innerHTML = `
+        <div class="print-card-back-flag-row">
+          <span class="print-card-flag">${item.flag}</span>
+          <span class="print-card-back-country">${item.country}</span>
+        </div>
+        <div class="print-card-capital-label">🏛️ Capital</div>
+        <div class="print-card-capital-name">${item.capital}</div>
+        <div class="print-card-currency">💰 ${item.currency || 'N/A'} (${item.currency_symbol || '?'} ${item.currency_code || '???'})</div>
+      `;
+    }
+    return card;
+  }
+
+  function buildPrintArea(list) {
+    printArea.innerHTML = '';
+    for (let i = 0; i < list.length; i += CARDS_PER_SHEET) {
+      const sheetItems = list.slice(i, i + CARDS_PER_SHEET);
+      const page = document.createElement('div');
+      page.className = 'print-page';
+
+      sheetItems.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'print-row';
+        row.appendChild(buildPrintCard(item, 'front'));
+        row.appendChild(buildPrintCard(item, 'back'));
+        page.appendChild(row);
+      });
+
+      printArea.appendChild(page);
+    }
+  }
+
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      if (!currentDeck.length) return;
+      buildPrintArea(currentDeck);
+      printModalCount.textContent = currentDeck.length;
+      printModalPages.textContent = Math.ceil(currentDeck.length / CARDS_PER_SHEET);
+      printModalOverlay.style.display = 'flex';
+    });
+  }
+
+  if (printModalCancel) {
+    printModalCancel.addEventListener('click', () => {
+      printModalOverlay.style.display = 'none';
+    });
+  }
+
+  if (printModalConfirm) {
+    printModalConfirm.addEventListener('click', () => {
+      printModalOverlay.style.display = 'none';
+      window.print();
     });
   }
 });

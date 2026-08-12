@@ -6,6 +6,7 @@
   <title>Flash Cards Hub — Interactive Learning for Kids</title>
   <meta name="description" content="Educational flashcard web app for kids. Learn World Countries & Capitals, Flags, Currencies, and Science.">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/print.css">
 </head>
 <body>
 
@@ -35,8 +36,31 @@
       <button class="filter-chip" data-filter="Americas">Americas 🗽</button>
       <button class="filter-chip" data-filter="Oceania">Oceania 🏝️</button>
       <button class="filter-chip" data-filter="starred">Starred ⭐</button>
+      <button class="print-btn" id="printBtn" title="Print the currently filtered cards">🖨️ Print Cards</button>
     </div>
   </header>
+
+  <!-- Print Setup Modal -->
+  <div class="print-modal-overlay" id="printModalOverlay" style="display: none;">
+    <div class="print-modal">
+      <h3>🖨️ Print Setup</h3>
+      <p>Printing <strong id="printModalCount">0</strong> cards on <strong id="printModalPages">0</strong> A4 sheet(s).</p>
+      <ul class="print-modal-tips">
+        <li>Paper size: <strong>A4</strong></li>
+        <li>Margins: <strong>None</strong></li>
+        <li>Scale: <strong>100% (Default)</strong></li>
+        <li>Headers and footers: <strong>Off</strong></li>
+      </ul>
+      <p class="print-modal-howto">Fold each sheet in half along the dashed center line, glue the two blank backs together, then cut along the dashed rows to get 5 double-sided cards.</p>
+      <div class="print-modal-actions">
+        <button class="print-modal-btn print-modal-cancel" id="printModalCancel">Cancel</button>
+        <button class="print-modal-btn print-modal-confirm" id="printModalConfirm">Print Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Print-only Content (built dynamically, only rendered by @media print) -->
+  <div id="printArea" class="print-only"></div>
 
   <!-- HOME: Deck Selection Hub View -->
   <main class="deck-hub-container" id="deckHubView">
@@ -52,7 +76,7 @@
     <div class="decks-grid" id="decksGrid">
       
       <!-- Countries & Capitals Deck Card -->
-      <div class="deck-card" data-deck-id="countries-capital" data-deck-path="decks/Countries-Capital/data.json" data-maps-path="decks/Countries-Capital/maps/">
+      <div class="deck-card" data-deck-id="countries-capital" data-deck-path="decks/Countries-Capital/data.json" data-maps-path="decks/Countries-Capital/maps/" data-print-maps-path="decks/Countries-Capital/maps-print/">
         <div class="deck-icon-badge">🌍</div>
         <div class="deck-info">
           <div class="deck-header-row">
